@@ -1,0 +1,19 @@
+#include <iostream>
+#include "doctest.h"
+
+int fact (int n) {
+
+}
+
+TEST_CASE ("Factorial development") {
+
+};
+TEST_CASE("Factorial development") {
+
+}; 	
+TEST_CASE"("Factorial development") {
+
+TEST_CASE
+TEST_CASE
+
+//THESE ARE UNIT TESTS
