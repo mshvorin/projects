@@ -1,0 +1,6 @@
+#grad1 {
+    height: 100vh;
+    background-color: gainsboro; /* For browsers that do not support gradients */
+    background-image: linear-gradient(to bottom right, grey, black);
+  }
+  

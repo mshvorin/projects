@@ -1,0 +1,7 @@
+Project 6 
+
+number of likes DOES NOT CHANGE add in addpost to either a stack queue or deque
+O(1) means only 1 lookup, like top or back, just an index
+when adding to a stack, make another separate stack, and pop off from the first stack onto the second stack until you reach the number you need to be at, and then add back to the first stack from the second one.
+store low medium and high priority posts in separate stacks or data structures to do all 4 of the ordering Q's
+update post search through priority and you have to reorder by time stamp
