@@ -1,7 +1,10 @@
+
+import './index.css'
+
 const { Configuration, OpenAIApi } = require("openai");
 
 const configuration = new Configuration({
-    apiKey: "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"
+    apiKey: "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"
   });
 
  const openai = new OpenAIApi(configuration);
