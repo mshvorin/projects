@@ -7,7 +7,7 @@ cout << "Zach lol" << endl;
 }
 int main() {
 
-cout << "Hi ur mom" << endl;
+cout << "" << endl;
 sayzach();
 return 0;
 }
