@@ -71,5 +71,6 @@ input[type=text]{
 
 .question {
   border: #9c89e7;
-  background-color: aqua;
+  background-color: rgb(97, 53, 147);
+  border: white;
 }

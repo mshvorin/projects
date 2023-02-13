@@ -6,7 +6,7 @@ import './App.css';
 const { Configuration, OpenAIApi } = require("openai");
 
 const configuration = new Configuration({
-    apiKey: "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"
+    apiKey: "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"
   });
 
 const openai = new OpenAIApi(configuration);
@@ -22,12 +22,27 @@ async function getResponse(Query) {
   return response.data.choices[0].text
  }
 
+ async function getImage(Query) {
+ const response = await openai.createImage({
+  prompt: Query,
+  n: 1,
+  size: "1024x1024",
+});
+
+var image_url = response.data.data[0].url;
+console.log(image_url)
+return image_url
+ }
+
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
 function App() {
   //const [text, setText] = useState("");
   const [text, setText] = useState("");
   const [question, setQuestion] = useState("");
+  //const [imgtext, setImageText] = useState('');
+  const [Image, setImage] = useState('');
+
 
 
   class NameForm extends React.Component {
@@ -52,13 +67,13 @@ function App() {
       setText(response);
       setQuestion(this.state.value);
       console.log(response);
+
     }
   
     resetPage() {
       window.location.reload();
     }
     
-
     render() {
       return (
         <form onSubmit={this.handleSubmit}>
@@ -66,7 +81,9 @@ function App() {
             <input type="text" value={this.state.value} onChange={this.handleChange} />
           </label>
           <input type="submit" value="Submit" />
+          <br></br>
           <div>
+            <br></br>
             {text}
           </div>
         </form>
@@ -84,10 +101,8 @@ function App() {
     constructor(props) {
       super(props);
       this.state = {value: ''};
-  
       this.handleChange = this.handleChange.bind(this);
       this.handleReset = this.handleChange.bind(this);
-
     }
   
     handleChange(event) {
@@ -97,14 +112,52 @@ function App() {
 
     handleReset(event) {
       event.preventDefault();
-      console.log("Done")
-      text=""
+      console.log("Done");
+      text="";
     }
 
     render () {
       return(
         <form>
       <button onClick={resetText}> Refresh Text </button>
+        </form>
+      );
+    }
+  }
+  class ImageButton extends React.Component {
+    
+    constructor(props) {
+      super(props);
+      this.state = {value: ''};
+
+      this.handleChange = this.handleChange.bind(this);
+      this.handleSubmit = this.handleChange.bind(this);
+    }
+  
+    handleChange(event) {
+      this.setState({value: event.target.value});
+      event.preventDefault();
+    }
+
+    async handleSubmit(event) {
+      event.preventDefault();
+      var responsee = (await getImage(this.state.value));
+      setImage(responsee);
+      console.log(responsee);
+      //setImageText(this.state.value);
+
+    }
+
+    render() {
+      return (
+        <form onSubmit={this.handleSubmit}>
+          <label>
+            <input type="text" value={this.state.value} onChange={this.handleChange} />
+          </label>
+          <input type="submit" value="Submit" />
+          <div>
+            <img src={Image} alt = "" />
+          </div>
         </form>
       );
     }
@@ -116,25 +169,24 @@ function App() {
         <p>
           Input your query here!
         </p>
-        <div classname="question">
+        <div className="question">
           {question}
         </div>
+        <br></br>
         <NameForm />
         <br></br>
         <br></br>
         <br></br>
+        <p> Generate an Image! </p>
+        <br></br>
+        <ImageButton />
         <br></br>
         <br></br>
-
+        <br></br>
+        <br></br>
+        <br></br>
+        <br></br>
         <ResetButton />
-        
-        <a
-          className="App-link"
-          href="https://r eactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-        </a>
       </header>
     </div>
   );
