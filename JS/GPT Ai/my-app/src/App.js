@@ -6,7 +6,7 @@ import './App.css';
 const { Configuration, OpenAIApi } = require("openai");
 
 const configuration = new Configuration({
-    apiKey: "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"
+    apiKey: "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"
   });
 
 const openai = new OpenAIApi(configuration);
@@ -33,8 +33,6 @@ var image_url = response.data.data[0].url;
 console.log(image_url)
 return image_url
  }
-
-const root = ReactDOM.createRoot(document.getElementById('root'));
 
 function App() {
   //const [text, setText] = useState("");
@@ -124,11 +122,12 @@ function App() {
       );
     }
   }
+
   class ImageButton extends React.Component {
     
     constructor(props) {
       super(props);
-      this.state = {value: ''};
+      this.state = {value: ""};
 
       this.handleChange = this.handleChange.bind(this);
       this.handleSubmit = this.handleChange.bind(this);
@@ -152,7 +151,7 @@ function App() {
       return (
         <form onSubmit={this.handleSubmit}>
           <label>
-            <input type="text" value={this.state.value} onChange={this.handleChange} />
+            <input type="text" value={this.state.value || ''} onChange={this.handleChange} />
           </label>
           <input type="submit" value="Submit" />
           <div>

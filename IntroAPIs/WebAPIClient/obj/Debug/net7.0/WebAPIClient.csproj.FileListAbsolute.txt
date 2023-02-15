@@ -1,0 +1,17 @@
+E:\projects\IntroAPIs\WebAPIClient\bin\Debug\net7.0\WebAPIClient.exe
+E:\projects\IntroAPIs\WebAPIClient\bin\Debug\net7.0\WebAPIClient.deps.json
+E:\projects\IntroAPIs\WebAPIClient\bin\Debug\net7.0\WebAPIClient.runtimeconfig.json
+E:\projects\IntroAPIs\WebAPIClient\bin\Debug\net7.0\WebAPIClient.dll
+E:\projects\IntroAPIs\WebAPIClient\bin\Debug\net7.0\WebAPIClient.pdb
+E:\projects\IntroAPIs\WebAPIClient\obj\Debug\net7.0\WebAPIClient.csproj.AssemblyReference.cache
+E:\projects\IntroAPIs\WebAPIClient\obj\Debug\net7.0\WebAPIClient.GeneratedMSBuildEditorConfig.editorconfig
+E:\projects\IntroAPIs\WebAPIClient\obj\Debug\net7.0\WebAPIClient.AssemblyInfoInputs.cache
+E:\projects\IntroAPIs\WebAPIClient\obj\Debug\net7.0\WebAPIClient.AssemblyInfo.cs
+E:\projects\IntroAPIs\WebAPIClient\obj\Debug\net7.0\WebAPIClient.csproj.CoreCompileInputs.cache
+E:\projects\IntroAPIs\WebAPIClient\obj\Debug\net7.0\WebAPIClient.dll
+E:\projects\IntroAPIs\WebAPIClient\obj\Debug\net7.0\refint\WebAPIClient.dll
+E:\projects\IntroAPIs\WebAPIClient\obj\Debug\net7.0\WebAPIClient.pdb
+E:\projects\IntroAPIs\WebAPIClient\obj\Debug\net7.0\WebAPIClient.genruntimeconfig.cache
+E:\projects\IntroAPIs\WebAPIClient\obj\Debug\net7.0\ref\WebAPIClient.dll
+E:\projects\IntroAPIs\WebAPIClient\bin\Debug\net7.0\Newtonsoft.Json.dll
+E:\projects\IntroAPIs\WebAPIClient\obj\Debug\net7.0\WebAPIClient.csproj.CopyComplete
