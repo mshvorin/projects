@@ -61,13 +61,15 @@ Deletes a specific personal prescription, identified by its `PrescriptionId`.
 
 ### Sample Request Body for `POST /generalprescriptions` Endpoint
 
-```json
+json
+```
 {
     "DrugName": "Ibuprofen",
     "TypicalDosageInMG": 400,
     "DrugID": 123,
     "GeneralInstructions": "Take with food"
 }
+```
 Sample Response Body for GET /personalprescriptions Endpoint
 
 json
